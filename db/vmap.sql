@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 16, 2017 at 01:47 PM
+-- Generation Time: Jun 16, 2017 at 05:11 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -43,10 +43,12 @@ CREATE TABLE `companies` (
 --
 
 INSERT INTO `companies` (`id`, `contact_detail`, `marketing_document_original_name`, `admin`, `logo_original_name`, `created_at`, `updated_at`, `marketing_document_new_name`, `logo_new_name`) VALUES
-(9, 'No. 149 Xlfred Aewane Road, Eti-Dsa, Ikoyi', 'firefox addone development', 'Andrio', 'b.jpg', '2017-06-16 05:18:57', '2017-06-16 05:18:57', 'ng_logos/3801497608337firefox_addone_development.txt', 'ng_logos/7421497608337b.jpg'),
-(10, 'No. 249 Xlfred Aewane Road, Eti-ssa, Ikoyi', 're', 'Awert', 'b.jpg', '2017-06-16 05:24:14', '2017-06-16 05:24:14', 'ng_logos/8991497608654re.txt', 'ng_logos/7581497608654b.jpg'),
-(11, 'No. 249 Xlfred Aewane Road, Eti-ssa, Ikoyi', 're', 'Awert', 'b.jpg', '2017-06-16 05:26:37', '2017-06-16 05:26:37', 'ng_logos/3371497608797re.txt', 'ng_logos/8261497608797b.jpg'),
-(12, 'No. 419 Xlfred Rewane Road, Eti-Osa, Ikoyi, Lagos', 're', 'AwertX', 'download.jpg', '2017-06-16 05:34:46', '2017-06-16 05:34:46', 'ng_logos/871497609286re.txt', 'ng_logos/971497609286download.jpg');
+(9, 'No. 149 Xlfred Aewane Road, Eti-Dsa, Ikoyi', 'firefox addone development', 'Andrio', 'b.jpg', '2017-06-16 05:18:57', '2017-06-16 05:18:57', 'ng_files/3801497608337firefox_addone_development.txt', 'ng_logos/7421497608337b.jpg'),
+(10, 'No. 249 Xlfred Aewane Road, Eti-ssa, Ikoyi', 're', 'Awert', 'b.jpg', '2017-06-16 05:24:14', '2017-06-16 05:24:14', 'ng_files/8991497608654re.txt', 'ng_logos/7581497608654b.jpg'),
+(11, 'No. 249 Xlfred Aewane Road, Eti-ssa, Ikoyi', 're', 'Awert', 'b.jpg', '2017-06-16 05:26:37', '2017-06-16 05:26:37', 'ng_files/3371497608797re.txt', 'ng_logos/8261497608797b.jpg'),
+(12, 'No. 419 Xlfred Rewane Road, Eti-Osa, Ikoyi, Lagos', 're', 'AwertX', 'download.jpg', '2017-06-16 05:34:46', '2017-06-16 05:34:46', 'ng_files/871497609286re.txt', 'ng_logos/971497609286download.jpg'),
+(13, 'No. 119 Xlfred Rewane Road, ASti-Osa, Ikoyi, Lagos', '20161204_122841.jpg', 'Bewert', 'seekerlog.jpg', '2017-06-16 09:12:48', '2017-06-16 09:12:48', 'ng_files/684149762236820161204_122841.jpg', 'ng_logos/8601497622368seekerlog.jpg'),
+(14, 'No. 119 Isla Rewane Road, Awwti-Osa, Ikoyi, Lagos', '1.png', 'Xadmin', 'come2biz..jpg', '2017-06-16 10:01:08', '2017-06-16 10:01:08', 'ng_files/56914976252681.png', 'ng_logos/5541497625268come2biz..jpg');
 
 -- --------------------------------------------------------
 
@@ -104,7 +106,7 @@ INSERT INTO `event_stands` (`id`, `event_id`, `price`, `picture`, `detail`, `sta
 (2, 1, 200, 'http://localhost/vmap/laravel/public/img/1.jpg', 'Facilities Tables Chairs Rest Room Power supply Parking Space Air Conditioner', 'Free', NULL, '2017-06-15 03:31:41', '2017-06-15 03:31:41'),
 (3, 1, 250, 'http://localhost/vmap/laravel/public/img/1.jpg', 'Facilities Tables Chairs Rest Room Power supply Parking Space Air Conditioner', 'Free', NULL, '2017-06-15 03:32:00', '2017-06-15 03:32:00'),
 (4, 2, 250, 'http://localhost/vmap/laravel/public/img/2.jpg', 'Facilities Tables Chairs Rest Room Power supply Parking Space Air Conditioner 4 Star: Dome Hotel - Pia Bella Hotel - Riverside Hotel - Hideaway Club ', 'Free', NULL, '2017-06-15 03:32:34', '2017-06-15 03:32:34'),
-(5, 1, 230, 'http://localhost/vmap/laravel/public/img/1.jpg', 'Facilities Tables Chairs Rest Room Power supply Parking Space Air Conditioner', 'Free', NULL, '2017-06-15 03:33:31', '2017-06-15 03:33:31'),
+(5, 1, 230, 'http://localhost/vmap/laravel/public/img/1.jpg', 'Facilities Tables Chairs Rest Room Power supply Parking Space Air Conditioner', 'Booked', 13, '2017-06-15 03:33:31', '2017-06-16 09:12:48'),
 (6, 2, 450, 'http://localhost/vmap/laravel/public/img/2.jpg', 'Facilities Tables Chairs Rest Room Power supply Parking Space Air Conditioner 4 Star: Dome Hotel - Pia Bella Hotel - Riverside Hotel - Hideaway Club ', 'Free', NULL, '2017-06-15 03:33:32', '2017-06-15 03:33:32'),
 (7, 2, 210, 'http://localhost/vmap/laravel/public/img/2.jpg', 'Facilities Tables Chairs Rest Room Power supply Parking Space Air Conditioner 4 Star: Dome Hotel - Pia Bella Hotel - Riverside Hotel - Hideaway Club ', 'Booked', 9, '2017-06-15 03:33:32', '2017-06-16 05:18:57'),
 (8, 2, 310, 'http://localhost/vmap/laravel/public/img/2.jpg', 'Facilities Tables Chairs Rest Room Power supply Parking Space Air Conditioner 4 Star: Dome Hotel - Pia Bella Hotel - Riverside Hotel - Hideaway Club ', 'Free', NULL, '2017-06-15 03:33:32', '2017-06-15 03:33:32'),
@@ -115,7 +117,7 @@ INSERT INTO `event_stands` (`id`, `event_id`, `price`, `picture`, `detail`, `sta
 (13, 3, 450, 'http://localhost/vmap/laravel/public/img/3.jpg', 'Facilities Tables Chairs Rest Room Power supply Parking Space Air Conditioner 3 Star: ER Hotel - Pia Bella Hotel - Riverside Hotel - Hideaway Club ', 'Free', NULL, '2017-06-15 03:34:24', '2017-06-15 03:34:24'),
 (14, 3, 350, 'http://localhost/vmap/laravel/public/img/3.jpg', 'Facilities Tables Chairs Rest Room Power supply Parking Space Air Conditioner 3 Star: ER Hotel - Pia Bella Hotel - Riverside Hotel - Hideaway Club ', 'Free', NULL, '2017-06-15 03:34:24', '2017-06-15 03:34:24'),
 (15, 4, 150, 'http://localhost/vmap/laravel/public/img/4.jpg', 'Facilities Tables Chairs Rest Room Power supply Parking Space Air Conditioner', 'Free', NULL, '2017-06-15 03:34:39', '2017-06-15 03:34:39'),
-(16, 4, 250, 'http://localhost/vmap/laravel/public/img/4.jpg', 'Facilities Tables Chairs Rest Room Power supply Parking Space Air Conditioner', 'Free', NULL, '2017-06-15 03:34:39', '2017-06-15 03:34:39'),
+(16, 4, 250, 'http://localhost/vmap/laravel/public/img/4.jpg', 'Facilities Tables Chairs Rest Room Power supply Parking Space Air Conditioner', 'Booked', 14, '2017-06-15 03:34:39', '2017-06-16 10:01:09'),
 (17, 4, 450, 'http://localhost/vmap/laravel/public/img/4.jpg', 'Facilities Tables Chairs Rest Room Power supply Parking Space Air Conditioner', 'Free', NULL, '2017-06-15 03:34:39', '2017-06-15 03:34:39'),
 (18, 4, 350, 'http://localhost/vmap/laravel/public/img/4.jpg', 'Facilities Tables Chairs Rest Room Power supply Parking Space Air Conditioner', 'Booked', 11, '2017-06-15 03:34:39', '2017-06-16 05:26:37'),
 (19, 5, 150, 'http://localhost/vmap/laravel/public/img/1.jpg', 'Facilities Tables Chairs Rest Room Power supply Parking Space Air Conditioner', 'Free', NULL, '2017-06-15 03:34:56', '2017-06-15 03:34:56'),
@@ -159,7 +161,7 @@ ALTER TABLE `event_stands`
 -- AUTO_INCREMENT for table `companies`
 --
 ALTER TABLE `companies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `events`
 --

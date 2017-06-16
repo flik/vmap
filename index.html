@@ -18,6 +18,7 @@
 <div class="container" ng-controller="myCtrl">
 	<h1> Virtual Exposition Application</h1> <div class="pull-right"> <a id="gohome" ng-click="ShowPage1()" href="javascript:{}">Home</a></div>
 	 <div  style="display:none;" id="loader"> <img  src="ajax_loader.gif"  width="50"  > Wait please...</div>
+	  <hr>
 	  <br />
         <div ng-show = "page2"> 
 			<h2>Exposition hall map of {{heading}}</h2>
@@ -67,6 +68,8 @@
        <br />
        
        <div ng-show="page3">
+		   
+		   <h4>Registration Area</h4>
            <!-- Form content-->
 				  <!-- FORM -->
 			<form name="userForm" ng-submit="submitForm()"  enctype="multipart/form-data">
@@ -103,13 +106,12 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
+          <h4 class="modal-title">Stand Detail</h4>
         </div>
-        <div class="modal-body">
-          
+        <div class="modal-body"> 
            <img id="stand_pic" src="http://1sourceng.com/LAGOSVENUES/wp-content/uploads/2015/10/Services-e1343275373904.jpg"   width="450"  >
            <br>
-           <p id="stand_price">Some stand_price in the stand.</p>
+           <h5 id="stand_price">Some stand_price in the stand.</h5>
             <br>
            <p id="stand_detail">Some stand_detail in the stand.</p>
         </div>

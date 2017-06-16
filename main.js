@@ -84,8 +84,7 @@
 				$scope.page1 =  true ;
 				$scope.page2 =  false ;
 				$scope.page3 =  false;
-				
-              $scope.message = data.message;
+				 $('#book').trigger('click'); 
             }
           });
         };

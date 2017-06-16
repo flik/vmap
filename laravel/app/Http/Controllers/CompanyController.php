@@ -64,7 +64,7 @@ class CompanyController  extends ApiController {
                         $company_model->admin = $datainput->username;
                         $company_model->contact_detail = $datainput->contact;   
                         $company_model->marketing_document_original_name =  $file_marketing_original_name;
-                        $company_model->marketing_document_new_name = 'ng_logos/'.$file_marketing_new_name;  
+                        $company_model->marketing_document_new_name = 'ng_files/'.$file_marketing_new_name;  
                         $company_model->logo_original_name = $file_logo_original_name;
                         $company_model->logo_new_name = 'ng_logos/'.$file_logo_new_name; 
                           
