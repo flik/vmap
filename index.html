@@ -17,6 +17,7 @@
   
 <div class="container" ng-controller="myCtrl">
 	<h1> Virtual Exposition Application</h1> <div class="pull-right"> <a id="gohome" ng-click="ShowPage1()" href="javascript:{}">Home</a></div>
+	 <div  style="display:none;" id="loader"> <img  src="ajax_loader.gif"  width="50"  > Wait please...</div>
 	  <br />
         <div ng-show = "page2"> 
 			<h2>Exposition hall map of {{heading}}</h2>
@@ -36,7 +37,8 @@
 							 
 							   <img  src="http://localhost/vmap/laravel/public/{{ x.logo_new_name }} "   width="150"  >
 							   <br> 
-							  <a href="http://localhost/vmap/laravel/public/{{ x.marketing_document_new_name }} " download>Marketing Document</a>
+							 
+							  <a target="_blank" href="http://localhost/vmap/laravel/public/{{ x.marketing_document_new_name }}" download>Marketing Document</a>
 							   <br>
 							   <p  > {{ x.detail }}</p>
 					      </div>
@@ -70,18 +72,18 @@
 			<form name="userForm" ng-submit="submitForm()"  enctype="multipart/form-data">
 			<div class="form-group">
 				<label>Contact details</label>
-				<input type="text" name="contact" class="form-control" ng-model="user.contact">
+				<input type="text" name="contact" class="form-control" ng-model="user.contact" required>
 				<span ng-show="errorName">{{errorName}}</span>
 			</div>
 			<div class="form-group">
 				<label>Company Admin</label>
-				<input type="text" name="username" class="form-control" ng-model="user.username">
+				<input type="text" name="username" class="form-control" ng-model="user.username" required>
 				<span ng-show="errorUserName">{{errorUserName}}</span>
 			</div>
 			 
 			 <div class="form-group">
 				<label>Marketing Documents</label>
-				<input type="file" ng-model="form.file_marketing"   id="file_marketing"><br/>
+				<input type="file" ng-model="form.file_marketing" id="file_marketing"><br/>
 				 <label>Company Logo</label><br/>
 				<input type="file" ng-model="form.file_logo"   id="file_logo">
 			 </div>

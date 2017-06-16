@@ -29,14 +29,14 @@
 			$scope.page2 = $scope.page2 ? false : true;
 			var btn = document.getElementById("book"); 
 			var cid = btn.getAttribute("alt"  );  
-						 
+						$('#loader').modal('show'); 
 			  $http({
 				method : "GET",
 				url : baseurl+"stands?cid="+cid
 			  }).then(function mySuccess(response) {
 				  $scope.stands = response.data.data;
-				   
-				   console.log(JSON.stringify(response.data.data));
+				   $('#loader').modal('hide'); 
+				   //console.log(JSON.stringify(response.data.data));
 				  }, function myError(response) {
 				  //$scope.myWelcome = response.statusText;
 			  });
@@ -49,6 +49,7 @@
 			$scope.page2 =  false ;
 			$scope.page3 =  true;
 			$('#myModal').modal('hide');
+			
 			 
 		}
 		
@@ -56,7 +57,7 @@
 		  $scope.user = {};
       // calling our submit function.
         $scope.submitForm = function($files) {
-		 
+		 $('#loader').modal('show');
         var fd = new FormData();    
             fd.append('file_marketing', $('input[type=file]')[0].files[0]);
             fd.append('file_logo', $('input[type=file]')[1].files[0]);
@@ -74,12 +75,11 @@
          })
           .success(function(data) {
 			  
-			  
+			$('#loader').modal('hide');
             if (data.errors) { 
               // Showing errors.
               $scope.errorName = data.errors.name;
-              $scope.errorUserName = data.errors.username;
-              $scope.errorEmail = data.errors.email;
+              $scope.errorUserName = data.errors.username; 
             } else {
 				$scope.page1 =  true ;
 				$scope.page2 =  false ;
