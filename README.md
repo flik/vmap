@@ -4,7 +4,8 @@
 Apache rewrite module must be enable.
 Just clone the project in in your www or htdocs directory.
 
-Then you can install all dependencies via Composer by running this command in your terminal in the root of your project:
+Go into laravel folder
+Then you can install all dependencies via Composer by running this command:
 ```bash
 composer install
 ```
