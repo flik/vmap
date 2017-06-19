@@ -27,14 +27,19 @@ class CompanyController  extends ApiController {
         $file_marketing = 'file_marketing';
         $file_logo = 'file_logo';
         //$rules = array($file_field_identifer => 'required|file|max:2048|mimes:ace,arc,arj,asf,au,avi,bmp,bz2,cab,cda,css,csv,dmg,doc,docx,dotm,dotx,flv,gif,gpx,gz,hqx,ico,jar,jpeg,jpg,js,kml,m4a,m4v,mid,midi,mkv,mov,mp3,mp4,mpa,mpeg,mpg,ogg,ogv,pages,pcx,pdf,pkg,png,potm,potx,pps,ppt,pptx,ra,ram,rm,rtf,sit,sitx,tar,tgz,tif,tiff,txt,wav,webm,wma,wmv,xls,xlsx,xltm,xltx,zip,zipx');
-
+		$file_marketing_original_name = '';
+		$file_marketing_new_name = '';
+		
+		$files = '';
+				
+		if(isset($request->file)){
 		 $files[0] = $request->file($file_marketing);
 		 $files[1] = $request->file($file_logo);
-		 
+		}
 		 //time is sort :)
 		 //$rules = array($file_logo => 'required|file|max:2048|mimes:ace,arc,arj,asf,au,avi,bmp,bz2,cab,cda,css,csv,dmg,doc,docx,dotm,dotx,flv,gif,gpx,gz,hqx,ico,jar,jpeg,jpg,js,kml,m4a,m4v,mid,midi,mkv,mov,mp3,mp4,mpa,mpeg,mpg,ogg,ogv,pages,pcx,pdf,pkg,png,potm,potx,pps,ppt,pptx,ra,ram,rm,rtf,sit,sitx,tar,tgz,tif,tiff,txt,wav,webm,wma,wmv,xls,xlsx,xltm,xltx,zip,zipx');
 
-		if($files[0]) { 
+		if(isset($files[0])) { 
                 $file = $files[0] ; 
 					
 				$file_marketing_extension = $file->getClientOriginalExtension();
@@ -45,7 +50,7 @@ class CompanyController  extends ApiController {
 					 
 		}
 		
-		if($files[1]) { 
+		if(isset($files[1])) { 
                 $file = $files[1] ; 
 					
 				$file_logo_extension = $file->getClientOriginalExtension();
@@ -56,10 +61,12 @@ class CompanyController  extends ApiController {
 					 
 		}
 		
-		$datainput = json_decode($request->dat);
+		if(isset($datainput->contact))
+			$datainput = json_decode($request->dat);
 		//print_r($request->stand_id);
 		// print_r($datainput); exit;
 		 
+		 if(isset($datainput->contact) && isset($datainput->contact)){
 						$company_model = new \App\Company();  
                         $company_model->admin = $datainput->username;
                         $company_model->contact_detail = $datainput->contact;   
@@ -69,7 +76,7 @@ class CompanyController  extends ApiController {
                         $company_model->logo_new_name = 'ng_logos/'.$file_logo_new_name; 
                           
                         if ($company_model->save()) {
-							
+							if($request->stand_id){
 							$last_company = $company_model::orderBy('id', 'desc')->first();
 							  
 							 $stand = new \App\Stands();
@@ -81,9 +88,10 @@ class CompanyController  extends ApiController {
 							 //sending email to admin
 							 $data = array('company_admin'=>$last_company->admin, 'standid'=>$request->stand_id );
 							// $this->html_email($data);
-							 
-							 } 
+						 }
+					 } 
 		 
+		 }
 		 return $this->respond(array('saved'));
  
     }
