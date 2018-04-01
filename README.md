@@ -21,10 +21,12 @@ Create new db and import sql file which is in db folder.
 Then modify .env file with database name, user and password of your mysql server
  
 then run commands from your project root directory:
-    - php artisan key:generate
-    - php artisan config:clear
-    - php artisan config:cache
-    
+```bash
+- php artisan key:generate
+- php artisan config:clear
+- php artisan config:cache
+```
+
 # Unit Testing 
 Start your XWAMP or LAMP servers.
 
