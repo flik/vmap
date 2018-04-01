@@ -2,6 +2,9 @@
 ## Installation
 
 Apache rewrite module must be enable.
+
+PDO and mysql and mysqli extentions must be enabled
+
 Just clone the project in in your www or htdocs directory.
 
 Go into laravel folder
