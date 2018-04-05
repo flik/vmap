@@ -25,9 +25,13 @@ Then modify .env file with database name, user and password of your mysql server
  
 then run commands from your project root directory:
 ```bash
-- php artisan key:generate
+
 - php artisan config:clear
-- php artisan config:cache
+- php artisan cache:clear 
+- php artisan view:clear
+- php artisan key:generate
+
+
 ```
 
 # Unit Testing 
